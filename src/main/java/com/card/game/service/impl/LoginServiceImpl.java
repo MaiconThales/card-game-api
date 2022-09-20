@@ -140,7 +140,7 @@ public class LoginServiceImpl implements LoginService {
 	@Override
 	public ResponseEntity<MessageResponseDTO> logoutUser(LogOutRequestDTO logOutRequest) {
 		refreshTokenService.deleteByUserId(logOutRequest.getUserId());
-		return ResponseEntity.ok(new MessageResponseDTO("Log out successful!"));
+		return ResponseEntity.ok(new MessageResponseDTO("GLOBAL_WORD.LOGGOUT"));
 	}
 	
 	@Override

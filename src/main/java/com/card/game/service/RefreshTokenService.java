@@ -2,8 +2,6 @@ package com.card.game.service;
 
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import com.card.game.model.RefreshToken;
 
 public interface RefreshTokenService {
@@ -14,7 +12,6 @@ public interface RefreshTokenService {
 
 	public RefreshToken verifyExpiration(RefreshToken token);
 
-	@Transactional
 	public int deleteByUserId(Long userId);
 
 }
