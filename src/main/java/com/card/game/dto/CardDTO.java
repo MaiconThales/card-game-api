@@ -2,24 +2,24 @@ package com.card.game.dto;
 
 public class CardDTO {
 	
-	private long id;
+	private Long id;
 	private String nameCard;
 	private int damage;
 	private int life;
 	
 	public CardDTO() {
 	}
-	public CardDTO(long id, String nameCard, int damage, int life) {
+	public CardDTO(Long id, String nameCard, int damage, int life) {
 		this.id = id;
 		this.nameCard = nameCard;
 		this.damage = damage;
 		this.life = life;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNameCard() {

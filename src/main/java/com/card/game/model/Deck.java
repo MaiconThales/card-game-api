@@ -20,10 +20,10 @@ public class Deck {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@Column
 	private String nameDeck;
-	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(
 			  name = "deck_card", 
 			  joinColumns = @JoinColumn(name = "id_card"), 
@@ -32,16 +32,16 @@ public class Deck {
 	
 	public Deck() {
 	}
-	public Deck(long id, String nameDeck, List<Card> cards) {
+	public Deck(Long id, String nameDeck, List<Card> cards) {
 		this.id = id;
 		this.nameDeck = nameDeck;
 		this.cards = cards;
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNameDeck() {

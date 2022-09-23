@@ -13,7 +13,7 @@ public class Card {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@Column
 	private String nameCard;
 	@Column
@@ -23,17 +23,17 @@ public class Card {
 	
 	public Card() {
 	}
-	public Card(long id, String nameCard, int damage, int life) {
+	public Card(Long id, String nameCard, int damage, int life) {
 		this.id = id;
 		this.nameCard = nameCard;
 		this.damage = damage;
 		this.life = life;
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNameCard() {

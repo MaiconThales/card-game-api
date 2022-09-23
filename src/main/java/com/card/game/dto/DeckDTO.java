@@ -4,22 +4,22 @@ import java.util.List;
 
 public class DeckDTO {
 	
-	private long id;
+	private Long id;
 	private String nameDeck;
 	private List<CardDTO> cards;
 	
 	public DeckDTO() {
 	}
-	public DeckDTO(long id, String nameDeck, List<CardDTO> cards) {
+	public DeckDTO(Long id, String nameDeck, List<CardDTO> cards) {
 		this.id = id;
 		this.nameDeck = nameDeck;
 		this.cards = cards;
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNameDeck() {
